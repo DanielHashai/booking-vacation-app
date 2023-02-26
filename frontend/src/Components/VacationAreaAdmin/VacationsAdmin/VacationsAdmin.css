@@ -1,0 +1,284 @@
+.VacationsAdmin {
+  height: 100vh;
+  border-radius: 200px;
+  
+  
+}
+
+.container {
+  margin:  auto;
+  padding: 0;
+
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  gap: 50px;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding-top: 100px;
+justify-content: center;
+  border-radius: 10px;
+}
+
+.container .card {
+  position: relative;
+  max-width: 300px;
+  width: 300px;
+  height: 150px;
+  background: #fff;
+  margin: 30px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5); */
+  transition: 0.4s ease-in-out;
+}
+.container .card:hover {
+  height: 570px;
+}
+
+.container .card .imgBx {
+  position: absolute;
+  width: 260px;
+  height: 100px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+.container .card .imgBx:hover {
+  border: transparent;
+}
+.container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .content {
+  position: relative;
+
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 100px;
+  transition-delay: 0.3s;
+}
+
+.date {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 0;
+}
+.add-icon {
+  position: absolute;
+}
+.design-for-pagination {
+  margin-top: 30px;
+}
+
+.VacationsAdmin .total-ike-button-for-user {
+  position: fixed;
+  right: 50px;
+  z-index: 10;
+  border: 2px solid black;
+}
+
+.buttons {
+  display: flex;
+
+  z-index: 2;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  right: 20px;
+  top: 20px;
+}
+.buttons .row {
+  display: block;
+}
+.buttons .row button {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  height: 55px;
+  width: 150px;
+  margin: 40px 0;
+  font-weight: 500;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  transition: all 0s ease-out;
+}
+.row button.buttons-control,
+.row button.buttons-control span {
+  background: #de463b;
+  border-left: 1px solid #2e4476;
+  box-shadow: 0px 5px 0px #2e4476;
+}
+.row button span {
+  position: absolute;
+  height: 55px;
+  width: 60px;
+  top: 0;
+  left: -61px;
+  line-height: 55px;
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+.row button.buttons-control:active {
+  box-shadow: 0px 2px 0px 0px 32e4476;
+}
+.row button:active {
+  top: 3px;
+}
+.row button:active span {
+  top: -3px;
+}
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.row button.color-like,
+.row button.color-like span {
+  background: #3b5999;
+  border-left: 1px solid #269bd0;
+  box-shadow: 0px 5px 0px #269bd0;
+}
+.card-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+/* ............ */
+.dropdown-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 250px;
+}
+.dropdown {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #4bb7c4;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown:hover{
+  transform: translateY(1%);
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.2);
+}
+.dropdown .dropdown-left-icon,
+.dropdown .dropdown-right-icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 15px;
+  height: 5px;
+  background: #fff;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+.dropdown .dropdown-left-icon {
+  left: 7px;
+  transform: rotate(45deg);
+}
+.dropdown .dropdown-right-icon {
+  transform: rotate(-45deg);
+}
+.dropdown.active .dropdown-left-icon {
+  transform: rotate(135deg);
+}
+.dropdown.active .dropdown-right-icon {
+  transform: rotate(-135deg);
+}
+.dropdown .dropdown-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 160px; */
+  margin-top: 63px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.dropdown.active .dropdown-items{
+visibility: visible;
+}
+.dropdown .dropdown-items .dropdown-a {
+  position: relative;
+  left: 100%;
+  display: flex;
+  font-size: 20px;
+  background: #fff;
+  color: #710099;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 2.5px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  transition-delay: calc(60ms * var(--i));
+}
+
+.dropdown .dropdown-items .dropdown-a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left,#4bb7c4 ,#060ebb);
+  z-index: -1;
+  border-radius: inherit;
+  transform: rotate(160deg);
+  transform-origin: right;
+  transition: 0.5s;
+}
+.dropdown .dropdown-items .dropdown-a:hover span {
+  transform: rotate(0deg);
+}
+.dropdown .dropdown-items .dropdown-a:hover {
+  color: #fff;
+}
+.dropdown.active .dropdown-items .dropdown-a {
+  left: 0;
+}
+.one{
+  --i:1
+}
+.two{
+  --i:2
+}
+.three{
+  --i:3
+}
+.content-form , .content-heading{
+  padding: 0;
+}

@@ -1,0 +1,33 @@
+import { authStore } from './../Redux/AuthState';
+import axios, { AxiosHeaders } from "axios";
+import authService from '../Services/AuthService';
+
+
+class Interceptors {
+
+    public create(): void {
+
+        // Add request interceptor:
+        axios.interceptors.request.use(async (request) => {
+
+            // If user logged in: 
+            if (authService.isLoggedIn()) {
+
+                // Add authorization header containing the string: "Bearer the-token"
+
+                (request.headers as AxiosHeaders).set("Authorization", `Bearer ${authStore.getState().token}`);
+
+
+
+            }
+
+            return request;
+
+        });
+    }
+
+}
+
+const interceptors = new Interceptors();
+
+export default interceptors;

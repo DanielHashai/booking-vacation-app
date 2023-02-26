@@ -1,0 +1,21 @@
+.VacationCard {
+}
+img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(./caribbeanImage.jpeg); */
+  background-size: cover;
+  border-radius: 10px;
+  transform: translateZ(40px);
+}
+.garbage{
+ position: absolute;
+ left: 0;
+ top: 5px; 
+}
+.editer{
+    position: absolute;
+ left: 0;
+ top: 50px; 
+}

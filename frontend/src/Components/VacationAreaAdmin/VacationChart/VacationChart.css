@@ -1,0 +1,11 @@
+.VacationChart {
+	
+    color: white;
+}
+.chart-container{
+    margin: 100px auto;
+    height: 500px;
+    width: 90%;
+    overflow: auto;
+    
+}
