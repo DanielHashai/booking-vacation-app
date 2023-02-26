@@ -121,6 +121,7 @@ form:is(p, label)a:hover,
   --webkit-transform: translate3d(-27%, 21%, 0);
   animation: move 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   --webkit-animation: move 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  padding: 100px;
 }
 
 @keyframes move {
@@ -157,7 +158,7 @@ form:is(p, label)a:hover,
   display: flex;
 }
 .addVacation .content-form , .content-heading{
-  padding: 5px;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .wrapper > div {

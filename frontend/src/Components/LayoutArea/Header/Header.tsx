@@ -107,23 +107,26 @@ function Header(): JSX.Element {
               </NavLink>
             </li>
           )}
-
-          <li>
-            <NavLink style={{ textDecoration: "none" }} to="/register">
-              <span className="aside-a">
-                <i className="fas fa-solid fa-users"></i>
-                <span className="aside-nav-item">Register</span>
-              </span>
-            </NavLink>
-          </li>
-          <li>
+          {!authService.isLoggedIn() && (
+            <li>
+              <NavLink style={{ textDecoration: "none" }} to="/register">
+                <span className="aside-a">
+                  <i className="fas fa-solid fa-users"></i>
+                  <span className="aside-nav-item">Register</span>
+                </span>
+              </NavLink>
+            </li>
+          )}
+          {!authService.isLoggedIn() && 
+           <li>
             <NavLink style={{ textDecoration: "none" }} to="/login">
               <span className="aside-a">
                 <i className="fas fa-regular fa-pen-to-square"></i>
                 <span className="aside-nav-item">Login</span>
               </span>
             </NavLink>
-          </li>
+          </li>}
+         
           {authService.isLoggedIn() && (
             <li>
               <NavLink

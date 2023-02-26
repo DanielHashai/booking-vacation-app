@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2023 at 11:30 AM
+-- Generation Time: Feb 26, 2023 at 03:06 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -44,6 +44,7 @@ INSERT INTO `followers` (`userId`, `vacationId`) VALUES
 (2, 135),
 (2, 137),
 (2, 140),
+(2, 142),
 (3, 128),
 (3, 131),
 (3, 133),
@@ -126,7 +127,8 @@ INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `startDate`
 (136, 'Canada', 'Canada can offer a diverse range of experiences, from exploring natural wonders to immersing oneself in the country\'s rich cultural scene. ', '2023-03-26', '2023-03-31', '600.00', 'f7ae4c6c-b910-40ac-aaea-59b6e3a7dad7.jpeg'),
 (137, 'France', 'France is known for its rich cultural heritage, with a long history of art, music, literature, fashion, and cuisine.', '2023-04-23', '2023-04-30', '3000.00', 'c298d06b-ef9c-4b5e-a1bf-67904ce2f184.jpeg'),
 (139, 'Sri Lanka', 'Sri Lanka has a rich and diverse culture that has been shaped by its long history and unique geography.', '2023-03-26', '2023-04-03', '5000.00', '2a6e68ff-6492-4313-9016-adca54c9c2df.jpeg'),
-(140, 'Africa', 'A vacation in Africa can offer a variety of experiences, from exploring natural wonders to immersing oneself in the rich cultural traditions of its many diverse countries.', '2023-06-19', '2023-06-30', '4000.00', 'e7aa9004-fe0d-40b0-97a3-238db75a3177.jpeg');
+(140, 'Africa', 'A vacation in Africa can offer a variety of experiences, from exploring natural wonders to immersing oneself in the rich cultural traditions of its many diverse countries.', '2023-06-19', '2023-06-30', '4000.00', 'e7aa9004-fe0d-40b0-97a3-238db75a3177.jpeg'),
+(142, 'Russia', 'A vacation in Russia can be an unforgettable experience, with a mix of historic landmarks, cultural attractions, and stunning natural beauty.', '2023-05-21', '2023-05-31', '1233.00', '872e6754-53fe-41a1-9329-e94a5722b9fb.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -165,7 +167,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `vacations`
 --
 ALTER TABLE `vacations`
-  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- Constraints for dumped tables

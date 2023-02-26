@@ -25,6 +25,7 @@ import {
 } from "../../../Redux/VacationState";
 import { authStore } from "../../../Redux/AuthState";
 import authService from "../../../Services/AuthService";
+import { Button } from "@mui/material";
 
 function Vacations(): JSX.Element {
   const [vacations, setVacations] = React.useState<VacationModel[]>([]);
@@ -169,6 +170,8 @@ function Vacations(): JSX.Element {
 
   return (
     <div className="Vacations">
+      <Button color="success" onClick={goBackToAllVacations} className="btn-temp"><i className="fa-solid fa-rotate-left btnbtn"></i></Button>
+      
       {authStore.getState().user && (
         <div className="container">
           {currentPosts &&

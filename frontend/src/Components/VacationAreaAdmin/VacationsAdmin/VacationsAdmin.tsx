@@ -13,6 +13,7 @@ import VacationCard from "../VacationCard/VacationCard";
 import { authStore } from "../../../Redux/AuthState";
 import CsvModel from "../../../Models/CsvModel";
 import ReactCVS from "../ReactCVS/ReactCVS";
+import { Button } from "@mui/material";
 
 function VacationsAdmin(): JSX.Element {
   const [vacations, setVacations] = React.useState<VacationModel[]>([]);
@@ -137,6 +138,7 @@ function VacationsAdmin(): JSX.Element {
 
   return (
     <div className="VacationsAdmin">
+      <Button color="success" onClick={goBackToAllVacations} className="btn-temp"><i className="fa-solid fa-rotate-left btnbtn"></i></Button>
       {authStore.getState().user && (
         <div className="container">
           {currentPosts &&

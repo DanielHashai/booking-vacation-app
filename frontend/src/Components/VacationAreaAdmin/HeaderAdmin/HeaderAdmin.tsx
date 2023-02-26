@@ -116,16 +116,21 @@ function HeaderAdmin(): JSX.Element {
               </span>
             </NavLink>
           </li>
-          <li>
-            <NavLink style={{ textDecoration: "none" }} to="/login">
-              <span className="aside-a">
-                <i className="fas fa-regular fa-pen-to-square"></i>
-                <span className="aside-nav-item">Login</span>
-              </span>
-            </NavLink>
-          </li>
+          {!authService.isLoggedIn() && (
+            <li>
+              <NavLink style={{ textDecoration: "none" }} to="/login">
+                <span className="aside-a">
+                  <i className="fas fa-regular fa-pen-to-square"></i>
+                  <span className="aside-nav-item">Login</span>
+                </span>
+              </NavLink>
+            </li>
+          )}
 
-          {authService.isLoggedIn() && (
+          
+
+
+          {!authService.isLoggedIn() && (
             <li>
               <NavLink style={{ textDecoration: "none" }} to="/register">
                 <span className="aside-a">
@@ -138,7 +143,7 @@ function HeaderAdmin(): JSX.Element {
 
           <li>
             <NavLink style={{ textDecoration: "none" }} to="/chart">
-              <span  className="aside-a">
+              <span className="aside-a">
                 <i className="fas fa-solid fa-chart-simple"></i>
                 <span className="aside-nav-item">Chart</span>
               </span>
@@ -150,7 +155,7 @@ function HeaderAdmin(): JSX.Element {
               to="/login"
               onClick={logout}
             >
-              <span  className="logout aside-a">
+              <span className="logout aside-a">
                 <i className="fas fa-sign-out-alt"></i>
                 <span className="aside-nav-item">Logout</span>
               </span>

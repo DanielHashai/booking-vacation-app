@@ -324,7 +324,6 @@ img {
   transition: 0.5s;
   /* padding: 4px 10px; */
   text-align: center;
-
 }
 .title {
   font-size: 60px;
@@ -336,6 +335,14 @@ img {
   opacity: 1;
   transition-delay: 2.5s;
 }
-.design-for-pagination{
-
+.design-for-pagination {
+}
+.btn-temp {
+  position: absolute;
+  left: 50%;
+  z-index: 1000;
+}
+.btnbtn {
+  font-size: 30px;
+  color: #e74c3c;
 }
