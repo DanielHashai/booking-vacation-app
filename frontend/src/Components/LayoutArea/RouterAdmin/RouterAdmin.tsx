@@ -5,6 +5,7 @@ import Register from "../../AuthArea/Register/Register";
 import UpdateVacation from "../../AuthArea/UpdateVacation/UpdateVacation";
 import VacationChart from "../../VacationAreaAdmin/VacationChart/VacationChart";
 import VacationsAdmin from "../../VacationAreaAdmin/VacationsAdmin/VacationsAdmin";
+import PageNotFound from "../PageNotFound/PageNotFound";
 import "./RouterAdmin.css";
 
 function RouterAdmin(): JSX.Element {
@@ -17,6 +18,7 @@ function RouterAdmin(): JSX.Element {
       <Route path="/chart" element={<VacationChart />} />
       <Route path="/vacations/add" element={<AddVacation />} />
       <Route path="/update/:id" element={<UpdateVacation />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
